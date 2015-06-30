@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="account">
+      <UniqueIdentifier>{ebbe2395-a883-4c63-8827-b96410162f39}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="server">
+      <UniqueIdentifier>{9653afdb-6af3-4e30-948b-8fd3558a5a63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="net_gate">
+      <UniqueIdentifier>{cf9b0118-ef35-4733-91ee-a8267dd3df6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="net_user">
+      <UniqueIdentifier>{fbc67441-8d7a-47ce-ad8f-85756a5c0bf3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="user_tcp_server.cpp">
+      <Filter>net_user</Filter>
+    </ClCompile>
+    <ClCompile Include="account_manager.cpp">
+      <Filter>account</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>server</Filter>
+    </ClCompile>
+    <ClCompile Include="user_session.cpp">
+      <Filter>net_user</Filter>
+    </ClCompile>
+    <ClCompile Include="gate_tcp_server.cpp">
+      <Filter>net_gate</Filter>
+    </ClCompile>
+    <ClCompile Include="gate_session.cpp">
+      <Filter>net_gate</Filter>
+    </ClCompile>
+    <ClCompile Include="server.cpp">
+      <Filter>server</Filter>
+    </ClCompile>
+    <ClCompile Include="gate_manager.cpp">
+      <Filter>net_gate</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>server</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="user_tcp_server.h">
+      <Filter>net_user</Filter>
+    </ClInclude>
+    <ClInclude Include="account_manager.h">
+      <Filter>account</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>server</Filter>
+    </ClInclude>
+    <ClInclude Include="user_session.h">
+      <Filter>net_user</Filter>
+    </ClInclude>
+    <ClInclude Include="gate_tcp_server.h">
+      <Filter>net_gate</Filter>
+    </ClInclude>
+    <ClInclude Include="gate_session.h">
+      <Filter>net_gate</Filter>
+    </ClInclude>
+    <ClInclude Include="server.h">
+      <Filter>server</Filter>
+    </ClInclude>
+    <ClInclude Include="gate_manager.h">
+      <Filter>net_gate</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

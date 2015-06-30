@@ -1,0 +1,8 @@
+{
+	"serviceid":1,
+	"limit":2000,
+	"thread_count":8,
+	"proc_interval":10,
+	"max_speed":1,
+	"msg_pool_size":3306
+}

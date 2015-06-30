@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="public">
+      <UniqueIdentifier>{60e3748e-9079-47cb-b039-693f7407cae0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="database">
+      <UniqueIdentifier>{bbf0f942-d764-4165-8a13-4c60285ba559}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="event">
+      <UniqueIdentifier>{a9323418-949b-4f7d-855a-2f9dfbc3a70f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="exception">
+      <UniqueIdentifier>{02c71cfe-46a9-4732-8924-aac220e3208a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="json">
+      <UniqueIdentifier>{d3804d21-1d66-4e19-9887-7dce1351e6af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="log">
+      <UniqueIdentifier>{19827d46-6662-41b6-8340-6e7a271646bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="memory">
+      <UniqueIdentifier>{693c7b9f-1843-444b-bc5f-35a7193f23e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="crypt">
+      <UniqueIdentifier>{0ae366eb-42fb-4e9b-aedc-ee093a715ecc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="net">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="protoc">
+      <UniqueIdentifier>{ec362056-0e5d-4b74-963d-87a37b8b4d14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="message">
+      <UniqueIdentifier>{d5d9142a-acc8-4e96-8330-0066969cdea3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dump">
+      <UniqueIdentifier>{2a96b500-8fa4-44a8-ae20-4726d5cedbea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="message\clientmsg">
+      <UniqueIdentifier>{ae63a400-445d-4ca9-ab9a-fd32147bc320}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="message\servermsg">
+      <UniqueIdentifier>{3930c965-43a7-4bf4-b725-7aac14658e3a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="common_header.h">
+      <Filter>public</Filter>
+    </ClInclude>
+    <ClInclude Include="common_type.h">
+      <Filter>public</Filter>
+    </ClInclude>
+    <ClInclude Include="common_helper.h">
+      <Filter>public</Filter>
+    </ClInclude>
+    <ClInclude Include="common_template.h">
+      <Filter>public</Filter>
+    </ClInclude>
+    <ClInclude Include="json_help.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="database.h">
+      <Filter>database</Filter>
+    </ClInclude>
+    <ClInclude Include="event_call_back.h">
+      <Filter>event</Filter>
+    </ClInclude>
+    <ClInclude Include="event_table_object.h">
+      <Filter>event</Filter>
+    </ClInclude>
+    <ClInclude Include="event_manager.h">
+      <Filter>event</Filter>
+    </ClInclude>
+    <ClInclude Include="my_log.h">
+      <Filter>log</Filter>
+    </ClInclude>
+    <ClInclude Include="exception.h">
+      <Filter>exception</Filter>
+    </ClInclude>
+    <ClInclude Include="run_object.h">
+      <Filter>public</Filter>
+    </ClInclude>
+    <ClInclude Include="memory.h">
+      <Filter>memory</Filter>
+    </ClInclude>
+    <ClInclude Include="object_pool.h">
+      <Filter>memory</Filter>
+    </ClInclude>
+    <ClInclude Include="protoc_common.h">
+      <Filter>protoc</Filter>
+    </ClInclude>
+    <ClInclude Include="thread_buffer.h">
+      <Filter>protoc</Filter>
+    </ClInclude>
+    <ClInclude Include="packet_interface.h">
+      <Filter>protoc</Filter>
+    </ClInclude>
+    <ClInclude Include="net_type.h">
+      <Filter>protoc</Filter>
+    </ClInclude>
+    <ClInclude Include="server_frame.h">
+      <Filter>public</Filter>
+    </ClInclude>
+    <ClInclude Include="message\server_define.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="version.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="windump.h">
+      <Filter>dump</Filter>
+    </ClInclude>
+    <ClInclude Include="message\map.pb.h">
+      <Filter>message\clientmsg</Filter>
+    </ClInclude>
+    <ClInclude Include="message\booth.pb.h">
+      <Filter>message\clientmsg</Filter>
+    </ClInclude>
+    <ClInclude Include="message\common.pb.h">
+      <Filter>message\clientmsg</Filter>
+    </ClInclude>
+    <ClInclude Include="message\friend.pb.h">
+      <Filter>message\clientmsg</Filter>
+    </ClInclude>
+    <ClInclude Include="message\login.pb.h">
+      <Filter>message\clientmsg</Filter>
+    </ClInclude>
+    <ClInclude Include="message\mail.pb.h">
+      <Filter>message\clientmsg</Filter>
+    </ClInclude>
+    <ClInclude Include="message\msgs2s.pb.h">
+      <Filter>message\servermsg</Filter>
+    </ClInclude>
+    <ClInclude Include="message\msg_gate_login.pb.h">
+      <Filter>message\servermsg</Filter>
+    </ClInclude>
+    <ClInclude Include="message\msg_gate_game.pb.h">
+      <Filter>message\servermsg</Filter>
+    </ClInclude>
+    <ClInclude Include="message\msg_game_db.pb.h">
+      <Filter>message\servermsg</Filter>
+    </ClInclude>
+    <ClInclude Include="message\player_define.pb.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="message\msgs2c.pb.h">
+      <Filter>message\clientmsg</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="json_help.cpp">
+      <Filter>json</Filter>
+    </ClCompile>
+    <ClCompile Include="database.cpp">
+      <Filter>database</Filter>
+    </ClCompile>
+    <ClCompile Include="event_table_object.cpp">
+      <Filter>event</Filter>
+    </ClCompile>
+    <ClCompile Include="exception.cpp">
+      <Filter>exception</Filter>
+    </ClCompile>
+    <ClCompile Include="my_log.cpp">
+      <Filter>log</Filter>
+    </ClCompile>
+    <ClCompile Include="thread_buffer.cpp">
+      <Filter>protoc</Filter>
+    </ClCompile>
+    <ClCompile Include="server_frame.cpp">
+      <Filter>public</Filter>
+    </ClCompile>
+    <ClCompile Include="version.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="windump.cpp">
+      <Filter>dump</Filter>
+    </ClCompile>
+    <ClCompile Include="message\booth.pb.cc">
+      <Filter>message\clientmsg</Filter>
+    </ClCompile>
+    <ClCompile Include="message\common.pb.cc">
+      <Filter>message\clientmsg</Filter>
+    </ClCompile>
+    <ClCompile Include="message\friend.pb.cc">
+      <Filter>message\clientmsg</Filter>
+    </ClCompile>
+    <ClCompile Include="message\login.pb.cc">
+      <Filter>message\clientmsg</Filter>
+    </ClCompile>
+    <ClCompile Include="message\mail.pb.cc">
+      <Filter>message\clientmsg</Filter>
+    </ClCompile>
+    <ClCompile Include="message\map.pb.cc">
+      <Filter>message\clientmsg</Filter>
+    </ClCompile>
+    <ClCompile Include="message\msgs2s.pb.cc">
+      <Filter>message\servermsg</Filter>
+    </ClCompile>
+    <ClCompile Include="message\msg_gate_login.pb.cc">
+      <Filter>message\servermsg</Filter>
+    </ClCompile>
+    <ClCompile Include="message\msg_gate_game.pb.cc">
+      <Filter>message\servermsg</Filter>
+    </ClCompile>
+    <ClCompile Include="message\msg_game_db.pb.cc">
+      <Filter>message\servermsg</Filter>
+    </ClCompile>
+    <ClCompile Include="message\player_define.pb.cc">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="message\msgs2c.pb.cc">
+      <Filter>message\clientmsg</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

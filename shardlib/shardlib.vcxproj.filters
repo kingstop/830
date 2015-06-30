@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="message">
+      <UniqueIdentifier>{fe4a203f-c292-49d1-af1e-54419282bf58}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="message\server_define.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="message\booth.pb.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="message\common.pb.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="message\friend.pb.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="message\login.pb.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="message\mail.pb.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="message\map.pb.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="message\msg_game_db.pb.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="message\msg_gate_game.pb.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="message\msg_gate_login.pb.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="message\msgs2c.pb.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="message\msgs2s.pb.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="message\player_define.pb.h">
+      <Filter>message</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="message\common.pb.cc">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="message\friend.pb.cc">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="message\login.pb.cc">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="message\mail.pb.cc">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="message\map.pb.cc">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="message\msg_game_db.pb.cc">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="message\msg_gate_game.pb.cc">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="message\msg_gate_login.pb.cc">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="message\msgs2c.pb.cc">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="message\msgs2s.pb.cc">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="message\player_define.pb.cc">
+      <Filter>message</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

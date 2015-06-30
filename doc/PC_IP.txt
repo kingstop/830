@@ -1,0 +1,5 @@
+ 180.118.249.32  Administartor furenwang 8765  
+局域网ip及账号密码
+192.168.1.103（这个是映射到外网的）Administrator furenwang 8765 
+192.168.1.102 Administrator furenwang258
+192.168.1.105（2003的） Administrator furenwang147

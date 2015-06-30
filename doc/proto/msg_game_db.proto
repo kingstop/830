@@ -1,0 +1,32 @@
+package msgs2s;
+import "msg_gate_login.proto";
+import "player_define.proto";
+message MsgGS2DBQueryChar
+{
+	required GTLGData data = 1;
+}
+message MsgDB2GSQueryCharResult
+{
+	optional PlayerInfo info = 1;
+	required uint32 	result = 2;
+}
+
+enum LineState
+{
+	_ON_LINE_ = 1;
+	_OFF_LINE = 2;
+};
+message DBPlayerData
+{
+	
+	required PlayerInfo data = 1;
+	required LineState  state = 2;
+}
+message MsgGS2DBSavePlaye
+{
+	repeated DBPlayerData players = 1;
+}
+message MsgGS2DBChangeServer
+{
+	required uint32 city = 1;
+}

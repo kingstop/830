@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="server">
+      <UniqueIdentifier>{7a97a3ce-41d7-4dd1-b6d7-78f2b8daf916}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="net_login">
+      <UniqueIdentifier>{e539f0f0-801a-4edd-bda7-77744cd63292}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="net_user">
+      <UniqueIdentifier>{f54baa4b-941b-4104-ab11-6ce833153a5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="users">
+      <UniqueIdentifier>{ce4aa11e-9b4d-4472-8626-c2d1619dd0d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="net_game">
+      <UniqueIdentifier>{47336a41-cb24-4f64-b0c7-69b2ab8e170d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="user">
+      <UniqueIdentifier>{bfa3d0ca-21db-4937-b5ef-96f887d178b2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="login_client.cpp">
+      <Filter>net_login</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>server</Filter>
+    </ClCompile>
+    <ClCompile Include="server.cpp">
+      <Filter>server</Filter>
+    </ClCompile>
+    <ClCompile Include="user_tcp_server.cpp">
+      <Filter>net_user</Filter>
+    </ClCompile>
+    <ClCompile Include="user_session.cpp">
+      <Filter>net_user</Filter>
+    </ClCompile>
+    <ClCompile Include="game_client.cpp">
+      <Filter>net_game</Filter>
+    </ClCompile>
+    <ClCompile Include="user_manager.cpp">
+      <Filter>user</Filter>
+    </ClCompile>
+    <ClCompile Include="game_manager.cpp">
+      <Filter>net_game</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>server</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="login_client.h">
+      <Filter>net_login</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>server</Filter>
+    </ClInclude>
+    <ClInclude Include="server.h">
+      <Filter>server</Filter>
+    </ClInclude>
+    <ClInclude Include="user_session.h">
+      <Filter>net_user</Filter>
+    </ClInclude>
+    <ClInclude Include="user_tcp_server.h">
+      <Filter>net_user</Filter>
+    </ClInclude>
+    <ClInclude Include="game_client.h">
+      <Filter>net_game</Filter>
+    </ClInclude>
+    <ClInclude Include="user_manager.h">
+      <Filter>user</Filter>
+    </ClInclude>
+    <ClInclude Include="game_manager.h">
+      <Filter>net_game</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

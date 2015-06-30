@@ -1,0 +1,24 @@
+package clientmsg;
+import "common.proto";
+//抢占展台
+message HoldBooth
+{
+	optional uint32 cityid = 1;  //城市id
+	optional uint32 boothid = 2;   //展台id
+	optional uint32 charid = 3;    //角色id
+};
+//展台状态
+message BoothState
+{
+	repeated HoldBooth states = 1;   
+};
+//离开展台
+message LeaveBooth
+{
+	repeated uint32 boothids = 1;   //展台id
+	
+};
+//获取展台状态
+message GetBoothState
+{
+};

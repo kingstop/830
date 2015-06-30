@@ -1,0 +1,97 @@
+package clientmsg;
+import "common.proto";
+//玩家离开场景 server 2 client
+message PlayerLeaveScene
+{
+
+}
+
+
+//自己进入场景也是这个消息, charid 是自己的
+//刷新地图消息, 客户端收到这个消息后，地图上显示一个角色
+message MapScreenRefreshCharacter
+{	
+	optional MapCharInfo mapinfo = 1;
+	//刘爱卿 2013-7-18
+	optional uint32 mapid = 2;
+	optional uint32 cityid = 3;
+};
+
+//发送九屏的数据给客户端
+//收到此消息，批量创建地图角色
+message NineScreenRefreshPlayer
+{
+	repeated MapCharInfo users = 1;
+};
+
+//新玩家进入可见区域 Server 2 client
+message PlayerJoinRange
+{
+	optional MapCharInfo _joinUser = 1;
+}
+
+//角色移动	server -> client | client -> server
+//客户端发送此消息给服务器
+//服务器广播此消息给所有九屏玩家
+message CharMove
+{
+	optional uint32 charid = 1;		//角色ID
+	optional float dir = 2;			//希望移动的方向
+	optional float x = 3;			//目标点的X
+	optional float y = 4;			//目标点的Y
+	optional float speed = 5;		//移动速度,1\2\3，客户端决定
+	optional uint32 timestamp = 6;	//时间搓, 1970年1月1号到现在的秒数
+	optional uint32 state = 7;	//状态		
+};
+
+//角色移动失败
+//移动失败，请求移动的角色收到
+message CharMoveFailed
+{
+	optional uint32 x = 1;			//移动失败，回到的原点X
+	optional uint32 y = 2;			//移动失败，回到的原点Y
+	optional uint32 speed = 3;		//移动速度,1\2\3，客户端决定
+	optional float dir = 4;		//希望移动的方向
+	optional uint32 timestamp = 5;	//1970年1月1号到现在的秒数
+};
+
+//通知客户端删除地图的某个角色
+//玩家走出九屏，删除地图上面的显示
+message MapRemoveChar
+{
+	repeated uint32 users = 1;		//角色ID
+};
+
+//玩家请求跳转场景
+message CharChangeScene
+{	
+	optional uint32 cityid = 1;
+	optional uint32 mapid = 2;
+	optional uint32 x = 3;
+	optional uint32 y = 4;
+};
+
+//跳转场景结果
+enum enumChangeSceneResult
+{
+	enumChangeSceneResult_Success = 1;	//调整场景成功
+	enumChangeSceneResult_NotScene = 2;	//找不到对应的场景
+};
+
+//调整场景返回, 返回跳转场景的消息
+//跳转成功后，会再次发送角色自己的 MapScreenRefreshCharacter消息给客户端
+message ResponseChangeScene
+{
+	optional uint32 mapid = 1;
+	optional uint32 cityid = 2;
+	optional uint32 x = 3;
+	optional uint32 y = 4;
+	optional enumChangeSceneResult result = 5;
+};
+
+//本地图跳转
+message CharGoTo
+{
+	optional uint32 x = 1;	//目的点x
+	optional uint32 y = 2;	//目的点y
+};

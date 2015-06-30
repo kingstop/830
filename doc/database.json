@@ -1,0 +1,9 @@
+{
+	"id":0,
+	"db":"fu_center",
+	"ip":"127.0.0.1",
+	"user":"root",
+	"password":"root",
+	"port":3306,
+	"thread_count":4
+}

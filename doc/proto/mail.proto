@@ -1,0 +1,57 @@
+package clientmsg;
+import "common.proto";
+
+//邮件类型
+enum enumMailType
+{	
+	enumMailType_Sys = 1;
+	enumMailType_RequestAddFriend = 2;	//请求增加好友邮件
+};
+
+// 邮件内容
+message UserOneMailContent
+{
+	optional uint32 mailid = 1;
+	optional string content = 2;
+	optional enumMailType type = 3;
+	optional uint32 isdelete=4;
+	optional uint32 isread=5;
+};
+
+//用户上线后发此消息给服务器 获取邮件
+message UserOpenMail
+{
+};
+
+//用于服务器给用户发邮件 
+message SendMailContent
+{
+	repeated UserOneMailContent mail_contents = 1;
+};
+
+//用户删除邮件
+message DelMail
+{
+	repeated uint32 mail_ids = 2;
+};
+//用户读邮件
+message ReadMail
+{
+	repeated uint32 mail_ids=1;
+}
+//用户之间通过id发邮件
+message UserSendMailByid
+{
+	optional uint64 remoteid = 1;
+	optional string content = 2;
+	optional enumMailType type = 3;
+};
+//用户之间通过name发邮件
+message UserSendMailByName
+{
+	optional string remotename = 1;
+	optional string content = 2;
+	optional enumMailType type = 3;
+};
+
+

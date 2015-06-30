@@ -1,0 +1,84 @@
+package clientmsg;
+import "common.proto";
+
+
+//请求玩家好友列表
+message RequestUserFriendList
+{
+};
+
+//好友信息
+message UserFriendListInfo
+{
+	optional uint32 charid = 1;		//角色ID
+	optional string name = 2;		//名称
+	optional string remark=3;		//备注
+	optional bool online = 4;		//在线
+	optional enumCharType type = 5;	       //类型
+	optional enumGroupType group=6;         //分组
+};
+
+//返回玩家好友列表
+message SendUserFriendList
+{
+	repeated UserFriendListInfo friendlist = 1;
+};
+
+//请求加入好友
+message RequestAddFriend
+{	
+	optional string name = 1;	//好友角色姓名
+//liuaiqing
+	optional enumGroupType group=2; //分组
+};
+//通知加好友
+message AddFriendNotify
+{
+	optional string  name = 1;	//发起请求的玩家
+};
+
+//回复添加好友请求
+message ResponseAddOther
+{
+	optional bool accept = 1;	//是否同意
+	optional string name = 2;	//对方玩家的角色信息
+	optional uint32 charid  = 3;	//离线玩家charid, 解析增加好友邮件获取
+	optional enumCharType chartype = 4;		//离线玩家type,解析邮件获取
+//liuaiqing
+	optional enumGroupType group = 5;       //离线玩家的group，解析邮件获得
+};
+
+//请求删除好友
+message RequestDelFriend
+{	
+	repeated string names = 1;	//玩家名称
+};
+
+//通知好友状态
+message NotifyOnlineState
+{
+	optional string name = 1;
+	optional bool online = 2;
+};
+
+//添加好友结果返回
+message AddFriendResult
+{
+	optional bool success = 1;			//是否添加成功
+	optional UserFriendListInfo friendinfo = 2;	//添加成功的好友信息
+};
+//刘爱卿 2013-8-3
+//修改备注
+message ModifyRemarks
+{
+	optional string name=1;  //好友的名字
+	optional string remark=2; //备注
+	
+}
+//修改分组
+message ModifyGroup
+{
+	optional string name=1; //好友的名字
+	optional uint32 charid=2; // 好友的id
+	optional enumGroupType group=3; //分组
+};

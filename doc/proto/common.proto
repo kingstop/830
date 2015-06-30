@@ -1,0 +1,99 @@
+message CharInfo
+{
+	optional uint32 charid = 1;
+	optional uint32 user_account = 2;
+	optional string name = 3;
+	optional uint32 head = 4;
+	optional uint32 sex = 5;
+	optional uint32 colthid = 6;
+	optional enumCharType chartype = 7;
+};
+
+enum enCharState
+{
+	CharState_Move = 0;
+	CharState_Stop = 1;	
+}
+
+//地图角色信息
+message MapCharInfo
+{
+	optional CharInfo charinfo = 1;	//角色基本信息
+	optional float x = 2;			//位置x
+	optional float y = 3;			//位置y
+	optional float dir = 4;		//方向
+	optional enCharState state = 5;		// 状态
+};
+
+//上线初始化角色信息
+enum enumGetCharResult
+{
+	Response_Success  = 0;			//成功获取角色
+	Response_SystemError = 1;		//系统错误
+	Response_NewChar = 2;			//创建新角色，需要设置新手信息
+};
+
+enum CommonConst
+{	
+	MAX_NAMESIZE = 32;
+};
+
+//屏的长和宽
+enum SCREEN_CONST
+{
+	SCREEN_WIDTH	=	13;
+	SCREEN_HEIGHT	=	19;
+};
+
+//移动的方向
+enum DIR
+{
+	DIR_UP			= 0;
+	DIR_UPRIGHT		= 1;
+	DIR_RIGHT		= 2;
+	DIR_DOWNRIGHT	= 3;
+	DIR_DOWN		= 4;
+	DIR_DOWNLEFT	= 5;
+	DIR_LEFT		= 6;
+	DIR_UPLEFT		= 7;
+	DIR_ERROR		= 8;
+};
+
+//用户类型
+enum enumCharType 
+{
+	enumChar_Person = 1;
+	enumChar_Company = 2;
+};	
+//分组
+//liuaiqing
+enum enumGroupType
+{
+	enumGroup_Friend=1;    //交友分组
+	enumGroup_Shop=2;       //商城分组
+	enumGroup_Recruit=3;     //招聘分组
+	enumGroup_Blacklist=4;    //黑名单分组
+	enumGroup_ToBlacklist=5;    //被拉黑名单分组
+};
+//世界窗口消息类型
+enum enumWordmsgType
+{
+	enumWordmsg_ComanyNeed = 1;
+	enumWordmsg_Sys = 2;
+};
+//评价的类型
+enum enumAssessType
+{
+	enumAssess_Person_Resumeinfo = 1;   //个人简历信息
+	enumAssess_Person_Friendinfo = 2;   //个人交友信息
+	enumAssess_Person_Shoppinginfo = 3;  //个人商贸信息
+	enumAssess_Company_Companyinfo = 4;   //公司信息
+	enumAssess_Company_Proresume = 5;     //公司处理简历
+};
+//公司简历的存放位置
+enum enumCompanyTalentType
+{
+	enumCompanyTalent_Recycle = 3;
+	enumCompanyTalent_Noprocess = 1;
+	enumCompanyTalent_Talentpool = 2;
+};

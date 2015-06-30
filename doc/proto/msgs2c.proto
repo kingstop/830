@@ -1,0 +1,11 @@
+package msgs2c;
+enum enumCreateCharResult
+{
+	Create_Success  = 0;			//成功获取角色
+	Create_SystemError = 1;			//系统错误
+	Create_Name_Repeat = 2;			//创建新角色，需要设置新手信息
+};
+message MsgS2CCreatePlayerError
+{
+	required enumCreateCharResult  result = 1;
+}
