@@ -1,0 +1,65 @@
+package clientmsg;
+import "common.proto";
+message LoginRequest
+{
+	required string name = 1;
+	required string pwd = 2;
+}
+
+
+enum Reservation_type
+{
+	Reservation_send = 0;
+	Reservation_accepted = 1;
+};
+
+message Reservation
+{
+	required string guest_name = 1; //客人名字
+	required int32 guest_number = 2; //客人数量
+	required string guest_request = 3; //客人要求
+	required Reservation_type type = 4; //订单状态
+	required uint64 send_time = 5;
+}
+
+message GirlBaseInfo
+{
+	required string name = 1;
+	required int32 card = 2;
+	required string name_icon = 3;
+	
+	required string addr = 4; //地址
+	required string phone_number = 5; //电话
+	required int32 bank_card = 6; //银行卡号
+}
+message GirlInfo
+{
+	required GirlBaseInfo info = 1;
+
+	required int32 scoure = 2; //积分
+	required int32 Performance = 3; //业绩
+	required int32 Bonus = 4; //奖金 
+	repeated Reservation reservation = 5; //预约列表
+	required int32 reservation_car = 6; //预约汽车号码
+	required int32 last_month_rank = 7; //上个月业绩排名
+	required int32 current_month_rank = 8; //当月业绩排名
+}
+
+message ModifyInfoRequest
+{
+	required GirlBaseInfo info = 1;
+}
+
+message ModifyInfoACK
+{
+	
+}
+
+message goodinfo
+{
+	required int32 good_id = 1;
+	required int32 price = 2;
+	required string name = 3;
+	repeated string Description = 4;
+}
+
